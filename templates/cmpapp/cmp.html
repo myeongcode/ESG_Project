@@ -1,10 +1,14 @@
-<a href='/main/'>메인 돌아가기</a>
-<h1>{{ company }}</h1>
-<p>직종 : {{ company.cmp_sales }}, 
-매출액 : {{ company.cmp_sales }}, 
-종업원 : {{ company.cmp_workers }},
-기업설명 : {{ company.cmp_explanations }}</p>
-<p>ESG통합 등급 : {{ company_esg.cmp_ESG }}</p>
-<p>E 등급 : {{ company_esg.cmp_E }}</p>
-<p>S 등급 : {{ company_esg.cmp_S }}</p>
-<p>G 등급 : {{ company_esg.cmp_G }}</p>
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href='/main/'>메인 돌아가기</a>
+    <h1>{{ company }}</h1>
+    <p>직종 : {{ company.cmp_sales }}, 
+    매출액 : {{ company.cmp_sales }}, 
+    종업원 : {{ company.cmp_workers }},
+    기업설명 : {{ company.cmp_explanations }}</p>
+    <p>ESG통합 등급 : {{ company_esg.cmp_ESG }}</p>
+    <p>E 등급 : {{ company_esg.cmp_E }}</p>
+    <p>S 등급 : {{ company_esg.cmp_S }}</p>
+    <p>G 등급 : {{ company_esg.cmp_G }}</p>
+{% endblock %}

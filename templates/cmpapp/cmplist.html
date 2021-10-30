@@ -1,16 +1,20 @@
-<h3><a href="/main/">메인 돌아가기</a></h3>
-{% if company_list %}
-    <ol>
-        {% for company_inform in company_list %}
-            <li>
-                <a href="/company/{{ company_inform.id }}/">{{ company_inform }}</a><br>
-                <p>직종 :{{ company_inform.cmp_inderstry }}, </p>
-                <p>매출액 : {{ company_inform.cmp_sales }}</p>
-                <p>종업원 : {{ company_inform.cmp_workers }}</p>
-                <p>기업설명 : {{ company_inform.cmp_explanations }}</p>
-            </li>
-        {% endfor %}
-    </ol>
-{% else %}
-    <p>회사가 없습니다.</p>
-{% endif %}
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3><a href="/main/">메인 돌아가기</a></h3>
+    {% if company_list %}
+        <ol>
+            {% for company_inform in company_list %}
+                <li>
+                    <a href="/company/{{ company_inform.id }}/">{{ company_inform }}</a><br>
+                    <p>직종 :{{ company_inform.cmp_inderstry }}</p>
+                    <p>매출액 : {{ company_inform.cmp_sales }}</p>
+                    <p>종업원 : {{ company_inform.cmp_workers }}</p>
+                    <p>기업설명 : {{ company_inform.cmp_explanations }}</p>
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>회사가 없습니다.</p>
+    {% endif %}
+{% endblock %}

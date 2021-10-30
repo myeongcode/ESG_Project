@@ -1,0 +1,16 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>메인화면</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <div class="p-3 mb-2 bg-light text-dark">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
