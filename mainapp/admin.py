@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import CompanyName
-#from cmpapp.models import CompanyList
+from cmpapp.models import CompanyList, CompanyESG
 
 # Register your models here.
-admin.site.register(CompanyName)
-#admin.site.register(CompanyList)
+admin.site.register(CompanyList)
+admin.site.register(CompanyESG)
+
